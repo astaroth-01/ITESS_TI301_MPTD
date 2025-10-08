@@ -12,29 +12,29 @@
 
 package unidad1.proglineal;
 
-public class NumeroOpt {
-    private int[] arreglo;
+import java.util.Arrays;
 
-    public NumeroOpt(int[] arreglo) {
+public class NumeroOpt {
+    private double[] arreglo;
+
+    public NumeroOpt(double[] arreglo) {
         this.arreglo = arreglo;
     }
     
     public int resolver() {
         // Inicializar el valor minimo al elemento 0
-        int minimo = arreglo[0];
-        int idx = 0;
-        // Recorrer el arreglo
-        for( int i = 1; i < arreglo.length; i++ )
-            // Comparar con el valor más pequeño e intercambiar posiciones
-            if(minimo > arreglo[i]) {
-                minimo = arreglo[i];
-                idx = i;
-            }
+        double[] arregloCopy = Arrays.copyOf(this.arreglo, this.arreglo.length);
+        double minimo;
         
-            // Si el valor es negativo
-            if(minimo < 0)
-                // Regresarlo
-                return minimo;
+        // Ordenar arreglo
+        Arrays.sort(arregloCopy);
+        
+        // Encontrar el indice del valor más pequeño
+        minimo = arregloCopy[0];
+        if(minimo < 0)
+            for(int i = 0; i < this.arreglo.length; i++) 
+                if(arreglo[i] == minimo)
+                    return i;
             
         // Regresar -1
         return -1;
