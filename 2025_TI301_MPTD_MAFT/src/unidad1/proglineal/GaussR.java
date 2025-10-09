@@ -44,7 +44,7 @@ public class GaussR {
             for(int j = 0; j < this.pl[i].length; j++) {
                 if(i == r)
                     continue;
-                this.pl[i][j] += (outgoingVar * -1) * this.pl[r][j];
+                this.pl[i][j] -= outgoingVar * this.pl[r][j];
             }
         }
     }

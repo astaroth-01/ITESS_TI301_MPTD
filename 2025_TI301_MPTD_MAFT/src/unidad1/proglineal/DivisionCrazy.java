@@ -6,7 +6,8 @@
  * Descripción: Dadas dos columnas de número decimales, relizar la división
  *              elemento a elemento de la segunda columnas entre la primera,
  *              contando a partir del segundo elemento. De los resultados de
- *              las divisiones, encontrar el número positivo más pequeño.
+ *              las divisiones, encontrar el número positivo más pequeño y 
+ *              retornar el indice.
  * E-mail: miguelangelflto6@gmail.com
  * E-mail institucional: ti24110044@itess.edu.mx
  * Fecha: 06 - 10 - 2025

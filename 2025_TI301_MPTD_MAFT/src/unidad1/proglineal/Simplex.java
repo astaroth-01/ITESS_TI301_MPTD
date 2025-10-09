@@ -16,12 +16,46 @@ package unidad1.proglineal;
 public class Simplex {
     private double[][] pl;
     
+    public Simplex(double[][]pl) {
+        this.pl = pl;
+    }
     public void resolver() {
-        NumeroOpt pivotRow = new NumeroOpt(pl[0]);
+        NumeroOpt pivotColumn;
+    double[] column1 = new double[pl.length];
+    double[] columnRHS = new double[pl.length]; // Renombrar para claridad
+    
+    int pivotColIndex;
+    
+    while(true) {
+        pivotColumn = new NumeroOpt(pl[0]);
+        pivotColIndex = pivotColumn.resolver();
         
+        if(pivotColIndex == -1) break; // Condición de parada
         
+        // Extraer columnas 
+        for(int i = 0; i < pl.length; i++) {
+            column1[i] = pl[i][pivotColIndex];
+            columnRHS[i] = pl[i][pl[0].length - 1];
+        }
+        
+        DivisionCrazy pivotRow = new DivisionCrazy(column1, columnRHS);
+        int r = pivotRow.resolver();
+        
+        if(r == -1) break;
+
+            GaussR m = new GaussR(r, pivotColIndex, pl);
+            m.pivote();
+            System.out.println("Iteración completada:");
+            this.print();
+            System.out.println();
+        }
     }
     
     public void print() {
+        for(double[] r : pl) {
+            for(double c : r)
+                System.out.printf("%15.4f", c);
+            System.out.println();
+        }
     }
 }
