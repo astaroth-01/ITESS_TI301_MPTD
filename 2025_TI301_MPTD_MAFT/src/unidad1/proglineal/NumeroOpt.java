@@ -22,7 +22,6 @@ public class NumeroOpt {
     }
     
     public int resolver() {
-        // Inicializar el valor minimo al elemento 0
         double[] arregloCopy = Arrays.copyOf(this.arreglo, this.arreglo.length);
         double minimo;
         

@@ -22,6 +22,5 @@ public class SimplexTest {
         Simplex PlSolve = new Simplex(pl);
         // resolver()
         PlSolve.resolver();
-        
     }
 }

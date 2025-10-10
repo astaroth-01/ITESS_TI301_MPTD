@@ -20,9 +20,9 @@ public class Simplex {
         this.pl = pl;
     }
     public void resolver() {
-        NumeroOpt pivotColumn;
+    NumeroOpt pivotColumn;
     double[] column1 = new double[pl.length];
-    double[] columnRHS = new double[pl.length]; // Renombrar para claridad
+    double[] columnRHS = new double[pl.length];
     
     int pivotColIndex;
     
