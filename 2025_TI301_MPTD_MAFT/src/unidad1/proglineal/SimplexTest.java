@@ -13,11 +13,9 @@ package unidad1.proglineal;
 
 public class SimplexTest {
     public static void main(String...args) {
-        double[][] pl = {{1, -60, -30, -20, 0, 0, 0, 0, 0},
-                             {0, 8, 6, 1, 1, 0, 0, 0, 48},
-                             {0, 4, 2, 1.5, 0, 1, 0, 0, 20},
-                             {0, 2, 1.5, 0.5, 0, 0, 1, 0, 8},
-                             {0, 0, 1, 0, 0, 0, 0, 1, 5}};
+        double[][] pl = {{1,-4,-3,0,0,0},
+                         {0,1,1,1,0,40},
+                         {0,2,1,0,1,60}};
         
         Simplex PlSolve = new Simplex(pl);
         // resolver()
