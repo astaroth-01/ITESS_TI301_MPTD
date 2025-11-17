@@ -1,5 +1,5 @@
 /*
- * ITESS - TICS 2025 ESTRUCTURA Y ORGANIZACIÓN DE DATOS
+ * ITESS - TICS 2025 MATEMATICAS PARA LA TOMA DE DECISIONES
  * Periodo: Agosto - Diciembre 2025
  * Docente: Francisco Montecillo Puente 
  * Estudiante / Programador: Angel Flores
